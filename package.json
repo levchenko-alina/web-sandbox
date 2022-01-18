@@ -1,0 +1,49 @@
+{
+    "name": "web-sandboxes",
+    "private": true,
+    "scripts": {
+        "prepare": "husky install",
+        "format": "prettier --write \"**/*\" --ignore-unknown",
+        "eslint": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
+        "stylelint": "stylelint --fix \"**/*.{css,sass,scss}\"",
+        "test": "jest --watch"
+    },
+    "dependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "@types/jest": "^27.4.0",
+        "@types/node": "^17.0.8",
+        "@types/react": "^17.0.38",
+        "@typescript-eslint/eslint-plugin": "^5.6.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "dotenv": "^10.0.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^19.0.2",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jest": "^25.3.4",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.27.1",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "husky": "^7.0.4",
+        "jest": "^27.4.7",
+        "lint-staged": "^12.1.7",
+        "parcel": "^2.1.1",
+        "prettier": "^2.5.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "serve": "^13.0.2",
+        "stylelint": "^14.0.0",
+        "stylelint-config-standard-scss": "^3.0.0",
+        "stylelint-css-modules-no-global-scoped-selector": "^1.0.2",
+        "stylelint-scss": "^4.0.0",
+        "ts-jest": "^27.1.2",
+        "ts-node": "^10.4.0"
+    },
+    "workspaces": [
+        "sandboxes/*"
+    ],
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.1.1"
+    }
+}

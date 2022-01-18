@@ -1,0 +1,10 @@
+build
+dist
+node_modules
+coverage
+*.html
+*.md
+*.js
+*.jsx
+*.ts
+*.tsx
