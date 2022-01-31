@@ -2,7 +2,7 @@
  * @desc Setting the appropriate value for the two variables in every functions
  * @type {number}
  * @returns {number}
- * * @see {@link https://www.codewars.com/kata/571edd157e8954bab500032d}
+ * @see {@link https://www.codewars.com/kata/571edd157e8954bab500032d}
  */
 const v1 = 50;
 const v2 = 100;
