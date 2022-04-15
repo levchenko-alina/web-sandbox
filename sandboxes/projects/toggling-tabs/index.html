@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Toggling tabs</title>
+        <link rel="stylesheet" type="text/css" href="styles.scss" />
+        <script type="module" src="./index.js" defer></script>
+    </head>
+    <body>
+        <div class="js-toggling-tabs toggling-tabs">
+            <select class="js-selector selector toggling-tabs__selector">
+                <option class="selector__item" value="value1">Sort by price</option>
+                <option class="selector__item" value="value2">Sort by name</option>
+                <option class="selector__item" value="value3">Sort by relevance</option>
+            </select>
+
+            <div class="js-button-group button-group toggling-tabs__button-group">
+                <button type="button" data-value="value1" class="js-button button button-group__button">
+                    Sort by price
+                </button>
+                <button type="button" data-value="value2" class="js-button button button-group__button">
+                    Sort by name
+                </button>
+                <button type="button" data-value="value3" class="js-button button button-group__button">
+                    Sort by relevance
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
