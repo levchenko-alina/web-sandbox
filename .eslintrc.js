@@ -8,6 +8,9 @@ module.exports = {
         node: true,
         es2021: true,
     },
+    parserOptions: {
+        ecmaVersion: 2021,
+    },
     plugins: ['react', 'jsx-a11y', 'import', 'prettier'],
     extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
     rules: {
