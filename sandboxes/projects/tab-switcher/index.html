@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tab switcher</title>
+        <link rel="stylesheet" type="text/css" href="styles.scss" />
+        <script type="module" src="./index.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="tab-switcher js-tab-switcher">
+                <div class="tab-switcher__navigation">
+                    <label>
+                        <input
+                            class="input tab-switcher__input js-input"
+                            name="input"
+                            type="number"
+                            placeholder="Enter tab index"
+                        />
+                    </label>
+                    <button class="button tab-switcher__button js-button">Change tab</button>
+                </div>
+
+                <div class="tabs js-tabs">
+                    <ul role="tablist" class="tabs__list">
+                        <li class="tabs__item">
+                            <a
+                                href="#positive"
+                                class="tabs__link"
+                                aria-controls="positive"
+                                aria-selected="true"
+                                role="tab"
+                                id="1"
+                            >
+                                Positive
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a
+                                href="#negative"
+                                class="tabs__link"
+                                aria-controls="negative"
+                                aria-selected="false"
+                                role="tab"
+                                id="2"
+                            >
+                                Negative
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a
+                                href="#neutral"
+                                class="tabs__link"
+                                aria-controls="neutral"
+                                aria-selected="false"
+                                role="tab"
+                                id="3"
+                            >
+                                Neutral
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tabs__content">
+                        <div role="tabpanel" class="tabs__panel" aria-hidden="false" id="positive">
+                            Positive content
+                        </div>
+                        <div role="tabpanel" class="tabs__panel" aria-hidden="true" id="negative">Negative content</div>
+                        <div role="tabpanel" class="tabs__panel" aria-hidden="true" id="neutral">Neutral content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
