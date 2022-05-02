@@ -1,0 +1,129 @@
+@import '~node_modules/normalize.css/normalize.css';
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #74baff;
+    font-family: sans-serif;
+    font-size: 28px;
+    color: black;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.input {
+    display: inline-flex;
+    border: none;
+    border-bottom: #ddd solid 4px;
+}
+
+.button {
+    display: inline-flex;
+    background-color: #ddd;
+    border: none;
+    padding: 26px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 27px;
+    align-items: center;
+    white-space: nowrap;
+
+    &:hover {
+        transform: translate(0, 0.2em);
+        cursor: pointer;
+    }
+}
+
+.tabs {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 50px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        font-size: 24px;
+        padding: 0;
+    }
+
+    &__item {
+        text-transform: uppercase;
+
+        &:not(:first-child) {
+            margin-left: 27px;
+        }
+    }
+
+    &__link {
+        color: #ddd;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+
+        &[aria-selected='false'] {
+            color: #ddd;
+        }
+
+        &[aria-selected='true'] {
+            color: black;
+        }
+
+        &:hover {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    &__panel {
+        margin-top: 39px;
+
+        &[aria-hidden='true'] {
+            display: none;
+        }
+    }
+}
+
+/* Container */
+
+.tab-switcher {
+    display: flex;
+    flex-direction: column;
+    max-width: 883px;
+    width: 100%;
+    padding: 42px;
+    border-radius: 7px;
+    background-color: white;
+
+    &__navigation {
+        width: 100%;
+        display: flex;
+    }
+
+    &__button {
+        margin-left: 25px;
+    }
+
+    &__input {
+        width: 100%;
+    }
+
+    &__content {
+        color: black;
+    }
+}
