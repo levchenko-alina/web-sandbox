@@ -1,0 +1,91 @@
+@import '~node_modules/normalize.css/normalize.css';
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #40729e;
+    color: black;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.random-toggle-switches {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 242px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+
+    &__switch {
+        margin-bottom: 19px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.switch {
+    $root: &;
+
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 33px;
+
+    &__circle {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f1f1f1;
+        transition: 0.2s;
+        border-radius: 30px;
+
+        &::before {
+            border-radius: 50%;
+            position: absolute;
+            content: '';
+            height: 32px;
+            width: 32px;
+            background-color: white;
+            transition: 0.2s;
+            left: 1px;
+            border: 1px solid #dfdfdf;
+            box-shadow: 1px 1px 3px 0 #dfdfdf;
+        }
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + #{$root}__circle {
+            background-color: #2ccd71;
+
+            &::before {
+                left: 30px;
+            }
+        }
+    }
+}
