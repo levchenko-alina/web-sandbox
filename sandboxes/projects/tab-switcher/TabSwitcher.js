@@ -60,7 +60,7 @@ export class TabSwitcher {
         });
 
         e.target.ariaSelected = 'true';
-        this.handleChange?.(e.target.id);
+        this.handleChange?.(e.target.i);
 
         this.$tabPanels.forEach((content) => {
             // eslint-disable-next-line no-param-reassign
