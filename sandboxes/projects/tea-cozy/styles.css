@@ -1,5 +1,5 @@
 /* stylelint-disable selector-class-pattern */
-@import '~node_modules/normalize.css/normalize.css';
+@import 'npm:normalize.css/normalize.css';
 
 html {
     box-sizing: border-box;

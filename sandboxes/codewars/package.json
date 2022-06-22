@@ -1,0 +1,23 @@
+{
+    "name": "codewars",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/levchenko-alina/web-sandbox.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/levchenko-alina/web-sandbox/issues"
+    },
+    "homepage": "https://github.com/levchenko-alina/web-sandbox#readme",
+    "dependencies": {
+        "jest": "^28.1.1",
+        "ts-jest": "^28.0.5"
+    }
+}
