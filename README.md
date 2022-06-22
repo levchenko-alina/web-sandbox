@@ -8,11 +8,14 @@ Run `npm i`
 
 -   Browserslist
 -   Editor config
--   .env
 -   ESLint
 -   .gitignore and .gitattributes
 -   Prettier
 -   Stylelint
--   Jest
--   ts-node
 -   husky, lint-staged
+
+## How to create workspace.
+
+-   Go to the root
+-   Write npm init -w (place)
+-   Write npm i (name of dependencies) -w (place)

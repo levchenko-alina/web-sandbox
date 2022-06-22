@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Multi Step Form</title>
+        <link rel="stylesheet" type="text/css" href="styles.scss" />
+        <script type="module" src="./index.js" defer></script>
+    </head>
+    <body>
+        <div class="multi-step">
+            <div class="multi-step__container">
+                <div class="multi-step__form">
+                    <ul class="multi-step__numbered-list">
+                        <li class="multi-step__numbered-step" aria-selected="false">
+                            <button class="multi-step__numbered-button" role="tab" value="value1">Choose title</button>
+                        </li>
+                        <li class="multi-step__numbered-step" aria-selected="true">
+                            <button class="multi-step__numbered-button" role="tab" value="value2">
+                                Choose description
+                            </button>
+                        </li>
+                        <li class="multi-step__numbered-step" aria-selected="true">
+                            <button class="multi-step__numbered-button" role="tab" value="value3">Confirm data</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="multi-step__case">
+                    <div class="multi-step__case-description">
+                        <div data-value="value1" aria-hidden="false" class="multi-step__case-description-value">
+                            Choose title content
+                        </div>
+                        <div data-value="value2" aria-hidden="true" class="multi-step__case-description-value">
+                            Choose description content
+                        </div>
+                        <div data-value="value3" aria-hidden="true" class="multi-step__case-description-value">
+                            Are you happy now?
+                        </div>
+                    </div>
+                    <div class="multi-step__case__buttons">
+                        <button
+                            aria-hidden="false"
+                            role="button"
+                            class="multi-step__buttons__step buttons-button"
+                            data-value="value1"
+                        >
+                            Submit title
+                        </button>
+                        <button
+                            aria-hidden="true"
+                            role="button"
+                            class="multi-step__buttons__step buttons-button"
+                            data-value="value2"
+                        >
+                            Back
+                        </button>
+                        <button
+                            aria-hidden="true"
+                            role="button"
+                            class="multi-step__buttons__step buttons-button"
+                            data-value="value2"
+                        >
+                            Submit description
+                        </button>
+                        <button
+                            aria-hidden="true"
+                            role="button"
+                            class="multi-step__buttons__step buttons-button"
+                            data-value="value3"
+                        >
+                            No, go back
+                        </button>
+                        <button
+                            aria-hidden="true"
+                            role="button"
+                            class="multi-step__buttons__step buttons-button"
+                            data-value="value3"
+                        >
+                            Yes, go ahead
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
