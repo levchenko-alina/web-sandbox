@@ -60,7 +60,7 @@ export class TabSwitcher {
         });
 
         e.target.ariaSelected = 'true';
-      
+
         this.handleChange?.(e.target.id);
 
         this.$tabPanels.forEach((content) => {

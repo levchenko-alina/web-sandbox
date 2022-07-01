@@ -1,0 +1,155 @@
+@import 'npm:normalize.css/normalize.css';
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #8547aa;
+    color: black;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.multi-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #8e44ad;
+
+    &__container {
+        background-color: white;
+        display: flex;
+        max-width: 542px;
+        width: 100%;
+        align-items: center;
+        border-radius: 3px;
+        padding: 15px 12px;
+    }
+
+    &__form {
+        display: flex;
+        max-width: 160px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__numbered-list {
+        counter-reset: li;
+        list-style-type: none;
+        line-height: 20px;
+        padding: 0;
+        margin: 0 0 0 10px;
+    }
+
+    &__numbered-step {
+        margin: 5px 0 5px 30px;
+        cursor: pointer;
+        float: left;
+        position: relative;
+
+        &::before {
+            content: counter(li);
+            counter-increment: li;
+            float: left;
+            position: absolute;
+            left: -30px;
+            text-align: center;
+            line-height: 21px;
+            width: 21px;
+            height: 21px;
+            border: none;
+            border-radius: 50%;
+            color: black;
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        &[aria-selected='true'] {
+            &::before {
+                background-color: #f2f2f2;
+                color: black;
+            }
+        }
+
+        &[aria-selected='false'] {
+            font-weight: bold;
+
+            &::before {
+                color: white;
+                background-color: #2880b5;
+            }
+        }
+    }
+
+    &__numbered-button {
+        display: inline-flex;
+        padding: 0;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    &__case {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__case-description {
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    &__case-description-value {
+        &[aria-hidden='true'] {
+            display: none;
+        }
+
+        &__buttons {
+            margin: 0 0 3px;
+            display: inline-flex;
+        }
+    }
+}
+
+.buttons-button {
+    display: flex;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding: 12px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    cursor: pointer;
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+    &:hover {
+        background-color: #e9e9e9;
+    }
+
+    &[aria-hidden='true'] {
+        display: none;
+    }
+}
