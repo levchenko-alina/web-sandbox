@@ -38,7 +38,8 @@
         "sandboxes/projects/random-toggle-switches",
         "sandboxes/projects/tab-switcher",
         "sandboxes/projects/tea-cozy",
-        "sandboxes/projects/toggling-tabs"
+        "sandboxes/projects/toggling-tabs",
+        "sandboxes/projects/react-todo-list"
     ],
     "devDependencies": {
         "@parcel/transformer-sass": "^2.6.1"
